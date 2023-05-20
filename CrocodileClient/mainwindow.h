@@ -2,6 +2,13 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QVector>
+
+#include "startingwidget.h"
+#include "createroomwidget.h"
+#include "joinwidget.h"
+
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +22,19 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+public slots:
+    void startingWidget_createRoomButtonClick();
+    void startingWidget_joinButtonClick();
+    void createdRoomWindow_creationComplete(QVector<int>);
+
 private:
     Ui::MainWindow *ui;
+    StartingWidget* win1;
+    CreateRoomWidget* win2;
+    JoinWidget* win3;
+
 };
 #endif // MAINWINDOW_H
+
+
+

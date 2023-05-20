@@ -9,16 +9,40 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    createroomwidget.cpp \
+    difficultyselector.cpp \
+    generatedcodeselector.cpp \
+    joinwidget.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    rejimeselector.cpp \
+    slotsselector.cpp \
+    startingwidget.cpp
 
 HEADERS += \
-    mainwindow.h
+    createroomwidget.h \
+    difficultyselector.h \
+    generatedcodeselector.h \
+    joinwidget.h \
+    mainwindow.h \
+    rejimeselector.h \
+    slotsselector.h \
+    startingwidget.h
 
 FORMS += \
-    mainwindow.ui
+    createroomwidget.ui \
+    difficultyselector.ui \
+    generatedcodeselector.ui \
+    joinwidget.ui \
+    mainwindow.ui \
+    rejimeselector.ui \
+    slotsselector.ui \
+    startingwidget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    images.qrc
